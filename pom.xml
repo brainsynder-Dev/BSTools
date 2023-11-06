@@ -11,6 +11,7 @@
 
     <modules>
         <module>module/nbt</module>
+        <module>module/file</module>
         <module>module/storage</module>
         <module>module/workload</module>
     </modules>
@@ -32,8 +33,12 @@
 
     <repositories>
         <repository>
-            <id>bs-nms</id>
-            <url>https://repo.pluginwiki.us/repository/nms/</url>
+            <id>bs-repo-nms</id>
+            <url>https://repo.bsdevelopment.org/nms</url>
+        </repository>
+        <repository>
+            <id>bs-repo-releases</id>
+            <url>https://repo.bsdevelopment.org/releases</url>
         </repository>
     </repositories>
 
