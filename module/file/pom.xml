@@ -44,7 +44,16 @@
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.5.0</version>
                 <configuration>
-                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <relocations>
+                        <relocation>
+                            <pattern>com.eclipsesource.json</pattern>
+                            <shadedPattern>${parent.groupId}.json</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>io.github.thatsmusic99.configurationmaster</pattern>
+                            <shadedPattern>${parent.groupId}.configuration</shadedPattern>
+                        </relocation>
+                    </relocations>
                 </configuration>
                 <executions>
                     <execution>
@@ -52,18 +61,6 @@
                         <goals>
                             <goal>shade</goal>
                         </goals>
-                        <configuration>
-                            <relocations>
-                                <relocation>
-                                    <pattern>com.eclipsesource.json</pattern>
-                                    <shadedPattern>${parent.groupId}.json</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>io.github.thatsmusic99.configurationmaster</pattern>
-                                    <shadedPattern>${parent.groupId}.configuration</shadedPattern>
-                                </relocation>
-                            </relocations>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
