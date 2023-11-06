@@ -1,4 +1,4 @@
-package org.bsdevelopment.nbt.file;
+package org.bsdevelopment.file;
 
 import org.bsdevelopment.nbt.CompressedStreamTools;
 import org.bsdevelopment.nbt.StorageTagCompound;
