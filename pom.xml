@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>module/nbt</module>
         <module>module/storage</module>
         <module>module/workload</module>
     </modules>
