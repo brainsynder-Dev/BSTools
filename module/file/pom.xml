@@ -20,6 +20,7 @@
 
         <minimal-json.version>0.9.5</minimal-json.version>
         <configmaster.version>v2.0.0-rc.1</configmaster.version>
+        <toml.version>3.6.0</toml.version>
     </properties>
 
     <dependencies>
@@ -33,6 +34,12 @@
             <groupId>com.github.thatsmusic99</groupId>
             <artifactId>ConfigurationMaster-API</artifactId>
             <version>${configmaster.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.electronwill.night-config</groupId>
+            <artifactId>toml</artifactId>
+            <version>${toml.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -52,6 +59,10 @@
                         <relocation>
                             <pattern>io.github.thatsmusic99.configurationmaster</pattern>
                             <shadedPattern>${parent.groupId}.configuration</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>com.electronwill.nightconfig</pattern>
+                            <shadedPattern>${parent.groupId}.nightconfig</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
