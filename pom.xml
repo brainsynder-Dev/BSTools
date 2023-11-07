@@ -12,6 +12,7 @@
     <modules>
         <module>module/nbt</module>
         <module>module/file</module>
+        <module>module/strings</module>
         <module>module/storage</module>
         <module>module/workload</module>
     </modules>
