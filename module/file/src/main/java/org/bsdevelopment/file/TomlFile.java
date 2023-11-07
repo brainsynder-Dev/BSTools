@@ -62,6 +62,11 @@ public abstract class TomlFile {
         return fileConfig.get(path);
     }
 
+    public <T> T getValue (String path, T defaultValue) {
+        if (!fileConfig.contains(path)) return defaultValue;
+        return fileConfig.get(path);
+    }
+
     public String getName() {
         return file.getName().replace(".toml", "");
     }
