@@ -42,7 +42,7 @@ public abstract class JsonFile {
         try {
             if (!file.getParentFile().exists()) file.getParentFile().mkdirs();
             boolean defaultsLoaded = false;
-            if (!file.exists()) {
+            if ((!file.exists()) || (file.length() == 0)) {
                 loadDefaults();
                 defaultsLoaded = true;
                 OutputStreamWriter pw = new OutputStreamWriter(new FileOutputStream(file), ENCODE);
