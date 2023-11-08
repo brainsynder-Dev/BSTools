@@ -186,6 +186,12 @@ public class RandomCollection<E> {
         recalculate();
     }
 
+    public void clear () {
+        map.clear();
+
+        recalculate();
+    }
+
     /**
      * The function recalculates the total and updates the map with the new total and sorted elements.
      */
