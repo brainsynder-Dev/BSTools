@@ -17,6 +17,7 @@ public abstract class TomlFile {
 
     public TomlFile(File file, boolean loadDefaults) {
         this.file = FileUtils.checkFile(file);
+        Config.setInsertionOrderPreserved(true);
         defaultConfig = Config.inMemory();
         if (loadDefaults) reload();
     }
