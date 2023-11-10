@@ -11,6 +11,7 @@
 
     <modules>
         <module>module/nbt</module>
+        <module>module/command</module>
         <module>module/file</module>
         <module>module/strings</module>
         <module>module/storage</module>
